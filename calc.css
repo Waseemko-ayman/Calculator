@@ -1,0 +1,124 @@
+* {
+    --webkit-box-sizing: border-box;
+    --moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f3f3f3;
+}
+
+/**************************************************************/
+.container {
+    position: absolute;
+    left: 50%;
+    top: 57%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.calculation {
+    max-width: 100%;
+    width: 350px;
+    background-color: white;
+    padding: 30px;
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #ddd;
+}
+
+.calculation img {
+    max-width: 100%;
+    position: absolute;
+    left: 50%;
+    top: -109px;
+    transform: translateX(-50%);
+}
+
+@media (max-width: 767px) {
+    .calculation img {
+        width: 95px;
+        top: -84px;
+    }
+}
+
+.calculation .display {
+    width: 100%;
+}
+
+.calculation .display textarea {
+    max-width: 100%;
+    width: 100%;
+    height: 80px;
+    padding: 0 10px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 35px;
+    resize: none;
+}
+
+.calculation .display textarea::placeholder {
+    color: #B9B6C8;
+}
+
+.calculation .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.calculation input[type="button"] {
+    padding: 17px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    color: #333;
+    background-color: #f3f3f3;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.calculation input[type="button"]#equal {
+    grid-row: span 2;
+    background-color: green;
+    color: white;
+}
+
+.calculation input[value="0"] {
+    grid-column: span 2;
+}
+
+.calculation input[type="button"]#clear {
+    color: red;
+}
+
+.calculation input[value="/"],
+.calculation input[value="*"],
+.calculation input[value="-"],
+.calculation input[value="+"] {
+    color: green;
+    font-size: 20px;
+}
+
+.container p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: green;
+}
+
+.calculation input:not(.calculation .display input):hover {
+    color: white;
+    background-color: green;
+}

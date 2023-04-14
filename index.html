@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- normalize ربط ملف ال -->
+    <link rel="stylesheet" href="normalize.css">
+    <!-- Font Awessome Library -->
+    <link rel="stylesheet" href="all.min.css">
+    <!-- Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lobster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculation</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calculation">
+            <img src="person.png" alt="">
+            <div class="display">
+                <textarea placeholder="0" id="input" disabled></textarea>
+            </div>
+            <div class="buttons">
+                <!-- Full Erase -->
+                <input type="button" onclick="Clear()" value="C" id="clear">
+                <!-- Erase Single Value -->
+                <input type="button" onclick="Delete()" value="DEL" id="erase">
+                <input type="button" onclick="display('/')" value="/">
+                <input type="button" onclick="display('*')" value="*">
+    
+                <input type="button" onclick="display('7')" value="7">
+                <input type="button" onclick="display('8')" value="8">
+                <input type="button" onclick="display('9')" value="9">
+                <input type="button" onclick="display('-')" value="-">
+    
+                <input type="button" onclick="display('6')" value="6">
+                <input type="button" onclick="display('5')" value="5">
+                <input type="button" onclick="display('4')" value="4">
+                <input type="button" onclick="display('+')" value="+">
+    
+                <input type="button" onclick="display('1')" value="1">
+                <input type="button" onclick="display('2')" value="2">
+                <input type="button" onclick="display('3')" value="3">
+    
+                <input type="button" onclick="equal('=')" value="=" id="equal">
+                <input type="button" onclick="display('0')" value="0">
+                <input type="button" onclick="display('.')" value=".">
+            </div>
+        </div>
+        <p>&copy; 2023 By Waseem A. Abd Elhadi ❤️</p>
+    </div>
+
+    <script src="calc.js"></script>
+</body>
+</html>
